@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>everdevel</title>
+</head>
+<body>
+    <p><strike>strike</strike></p>
+    <p><sub>subscript</sub></p>
+    <p><sup>superscript</sup></p>
+    <p><em>em</em></p>
+    <p><mark>mark</mark></p>
+    <p>
+        문자위 주석
+        <ruby>
+            本<rt>ほん</rt>
+            田<rt>だ</rt>
+        </ruby>
+    </p>
+    <p><pre>글자를
+    적은 그
+    대로 
+                표시해줌
+    자스의 인터널 스트링?
+    </pre></p>
+    
+    <!-- 자주 쓰일지는 잘 모르겠음. -->
+    <dl>
+        <dt>용어 이름</dt>
+        <dd>용어 설명</dd>
+    </dl>
+    
+    <p><a href="https://www.naver.com/" target="_blank">naver (새창에서 열기)</a></p>
+    <p><a href="https://www.google.com/" target="_self">google (현재창에서 열기)</a></p>
+    <p><a href="https://www.everdevel.com/" target="_parent">everdevel (부모창에서 열기)</a></p>
+    <p><a href="https://www.tomodevel.jp/" target="_top" ping="링크에 접속시 해당 링크에 데이터 송신">
+        tomodevel (가장 처음창에서 열기)
+    </a></p>
+    <p><a name="here" title="해당 링크의 설명">한 페이지에서 이동시 사용 가능(scroll position set)</a></p>
+    
+    
+    <!-- 사실상 웹 봇이나 데이터를 가져올때 사용 -->
+    <p><time datetime="2022-01-14T07:33:06">time tag</time></p>
+    <p><time datetime="2022-01-14T07:33:06" pubdate="pubdate">발행일</time></p>
+    <p><h1>인용문</h1></p>
+    <p><blockquote cite="www.naver.com">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti,<br>
+        beatae consectetur maiores dolorum tempora inventore nulla cum. Minima, <br>
+        eligendi, dolorum facilis totam, ex suscipit delectus quod consequatur vitae hic laborum. <br>
+    </blockquote></p>
+    
+    <table border="1" cellspacing="10">
+        <tr> <!--  colum  -->
+            <td>A</td> <!-- row -->
+            <td>A</td> <!-- row -->
+            <td>A</td> <!-- row -->
+            <td>A</td> <!-- row -->
+        </tr>
+        <tr > <!--  colum  -->
+            <td colspan="2">A</td> <!-- row 2칸짜리 colum -->
+            <td rowspan="2">A</td> <!-- row 2칸짜리 colum -->
+        </tr>
+        <tr> <!--  colum  -->
+            <td>A</td> <!-- row -->
+        </tr>
+        <tr> <!--  colum  -->
+            <td>A</td> <!-- row -->
+        </tr>
+        
+        <!-- 사이트 내에서 외부 사이트를 보여줌 -->
+        <!-- 광고배너, 댓글창 등 -->
+        <iframe src="https://www.everdevel.com/HTML/iframe-tag/"></iframe> 
+    </table>
+    <style>
+        mark {
+            background: hotpink;
+            color: white;
+        }
+    </style>
+</body>
+</html>
