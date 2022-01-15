@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>everdevel</title>
+    <base href="/">
+    <!-- default public dir path -->
 </head>
 <body>
     <p><strike>strike</strike></p>
+    <p><del>삭제된 글을 표현</del></p>
+    <p><ins>추가된 글을 표현</ins></p>
     <p><sub>subscript</sub></p>
     <p><sup>superscript</sup></p>
     <p><em>em</em></p>
@@ -126,6 +130,76 @@
     <meter min='0' max='100' low='30' optimum='50' value='90' high='80'></meter>
     <!-- progress완 달리 변함 없는 값을 보여줌. -->
     
+    <address>서울시 송파구 잠실6동 올림픽로 300 120층 Everdevel Headqueater</address>
+    <!-- 주소 -->
+    
+    <a href="tel:010-0000-0000">모바일에서 전화 걸기</a>
+    <section>
+        <p>title</p>
+        <p>description</p>
+        
+        서로 상관은 있는 내용
+    </section>
+    
+    <article>
+        <p>title</p>
+        <p>description</p>
+        
+        서로 관련 없는 내용 작성시 사용
+    </article>
+    
+    <aside>공지, 문의사항등</aside>
+    
+    <footer>
+        <video src="">
+        해당 브라우저는 video태그를 지원하지 않습니다.
+        </video>
+        <audio src="">
+            해당 브라우저는 audio태그를 지원하지 않습니다.
+        </audio>
+    </footer>
+    <!-- 
+        audio, video
+        src : 비디오 파일의 주소
+        controls : 컨트롤러 표시
+        autoplay : 자동 재생
+        loop : 반복 재생
+        width : 영상의 가로길이
+        height : 영상의 세로길이
+        muted : 음소거 
+    -->
+    <abbr title="축약어를 나타냅니다">abbr</abbr><br>
+    
+    <bdi>아랍어글자를 역순으로(오 => 왼)으로 배치합니다.</bdi><br>
+    <bdo dir="rtl">글자 방향 조절</bdo>
+    
+    <details>
+        <summary>caption</summary>
+        <table border="1">
+            <caption>caption</caption>
+            <tr>
+                <td>h</td>
+                <td>e</td>
+                <td>l</td>
+                <td>l</td>
+            </tr>
+            <tr>
+                <td>h</td>
+                <td>e</td>
+                <td>l</td>
+                <td>l</td>
+            </tr>
+        </table>
+    </details>
+        
+    <cite>책, 영화 등의 제목을 적을때 사용</cite><br>
+    <code>//코드 작성시 사용</code>
+        
+    <fieldset>form내의 비슷한 input태그들을 구분할때 사용</fieldset>
+    <figure>
+        <img src="">
+        <figcaption>문서, 이미지, 오디오, 비디오 등의 설명</figcaption>
+    </figure>
     <script>
         document.getElementById("range").onchange = () => {
             document.querySelector("#rangeValue").innerText = document.querySelector("#range").value
