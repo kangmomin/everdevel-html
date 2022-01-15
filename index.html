@@ -101,9 +101,38 @@
     <label for="labelTest">labelTest</label> <!-- placeholder, 클릭시 해당 id의 input값으로 포커싱됨 -->
     <input type="text" id="labelTest">
     
+    <br>
+    <input type="text" list="binaryList">
+    <datalist id="binaryList"> <!-- autocomplete를 세팅할수 있음 -->
+        <option value="hello">hello</option>
+        <option value="world">world</option>
+    </datalist>
+    <br />
+    <select>
+        <optgroup label="hello World">
+            <option value="hello">hello</option>
+            <option value="world">world</option>
+        </optgroup>
+        <optgroup label="hello html">
+            <option value="hello">hello</option>
+            <option value="html">html</option>
+        </optgroup>
+    </select>
+    <br>
+    <input type="range" id="progressRange">
+    <progress id="rangedisplay" value='20' max='100'></progress>
+    <p id="progressValue">20</p>
+    
+    <meter min='0' max='100' low='30' optimum='50' value='90' high='80'></meter>
+    <!-- progress완 달리 변함 없는 값을 보여줌. -->
+    
     <script>
         document.getElementById("range").onchange = () => {
             document.querySelector("#rangeValue").innerText = document.querySelector("#range").value
+        }
+        document.querySelector('#progressRange').onchange = () => {
+            document.querySelector('#rangedisplay').value = document.querySelector('#progressRange').value
+            document.querySelector('#progressValue').innerText = document.querySelector('#progressRange').value
         }
     </script>
     <style>
