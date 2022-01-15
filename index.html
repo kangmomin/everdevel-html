@@ -73,6 +73,39 @@
         <!-- 광고배너, 댓글창 등 -->
         <iframe src="https://www.everdevel.com/HTML/iframe-tag/"></iframe> 
     </table>
+    
+    <input type="search" name="keyword"><br>
+    <input type="number" pattern="\d*" step="3"><br> 
+    <!-- \d*는 모바일 환경에서 문자가 입력되는 것을 방지해줌. -->
+    <!-- step은 number의 증감 간격 설정 -->
+    <input type="range" id="range" step="3" min="0" max="100">
+    <p id="rangeValue"></p>
+    <input type="date" value="2022-01-15"><br>
+    <input type="month" value="2022-01"><br>
+    <input type="week" value="2022-W13"> <br> <!-- 몇주차인지 -->
+    <input type="time" value="14:00"> <br>
+    <input type="file" accept="image/*"> <br>
+    <input type="file" accept="image/*" multiple> <br>
+    <input type="text" placeholder="autofocus" autofocus> <br>
+    <input type="text" placeholder="autocomplete" autocomplete="off"> <br> <!-- 자동완성 삭제 -->
+    <input type="text" placeholder="required" required> <br> <!-- 필수 입력 삭제 -->
+    <input type="text" placeholder="required" readonly> <br> <!-- 수정 불가 -->
+    
+    <form name="해당 폼의 이름" action="값을 보낼 주소" method="post" oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+        <input type='number' id='num1' name='num1' value='0'/>  +
+        <input type='number' id='num2' name='num2' value='0'/> =
+        <output for='num1, num2' name='result'></output> <!-- 굳이 쓸 필욘 없지만 웹봇을 위한 태그 -->
+        <input type="reset" value="reset">
+    </form><br>
+    
+    <label for="labelTest">labelTest</label> <!-- placeholder, 클릭시 해당 id의 input값으로 포커싱됨 -->
+    <input type="text" id="labelTest">
+    
+    <script>
+        document.getElementById("range").onchange = () => {
+            document.querySelector("#rangeValue").innerText = document.querySelector("#range").value
+        }
+    </script>
     <style>
         mark {
             background: hotpink;
